@@ -1,0 +1,10 @@
+Form Handling
+=======================
+Form Data Get => Two (Hook | State)
+Input => UseState | useRef (Hook use)
+
+useRef => dom (document object  whole change ) management / form (value changes | direct change)
+
+UseState | useRef => Mutable (Hook)
+
+State => Immutable (data not change)
