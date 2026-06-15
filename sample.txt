@@ -8,3 +8,5 @@ useRef => dom (document object  whole change ) management / form (value changes 
 UseState | useRef => Mutable (Hook)
 
 State => Immutable (data not change)
+
+Mutable >> Request CRUD get / dom changes get
