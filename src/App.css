@@ -5,7 +5,7 @@
   height: 90vh;
 }
 
-.user-name, .user-email, .user-message {
+.user-name, .user-email, .user-message, .user-option {
   width: 250px;
   margin: 5px 0px;
   padding: 10px;
@@ -31,4 +31,8 @@
   width: 100px;
   background-color: blue;
 
+}
+
+.user-checkbox {
+  margin: 10px 0px;
 }

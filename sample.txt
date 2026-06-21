@@ -5,8 +5,8 @@ Input => UseState | useRef (Hook use)
 
 useRef => dom (document object  whole change ) management / form (value changes | direct change)
 
-UseState | useRef => Mutable (Hook)
+useRef => Mutable (Hook)
 
-State => Immutable (data not change)
+UseState => Immutable (data not change) => State
 
 Mutable >> Request CRUD get / dom changes get

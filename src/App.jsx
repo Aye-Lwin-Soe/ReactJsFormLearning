@@ -1,58 +1,53 @@
 import './App.css';
-import React, { useRef } from 'react'
+import React, { useState } from 'react'
 
-function App() {
+const App = () => {
 
-  const name = useRef('')
-  const email = useRef('')
-  const message = useRef('')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [language, setLanguage] = useState('')
+  const [term, setTerm] = useState(false)
 
-  const userDataReceiver = () => {
+  const programmingLanguages = ['Java', 'PHP', 'C#', 'C++', 'Python', 'ReactJS'];
+
+  const submitEvent = () => {
     const data = {
-      userName: name.current.value,
-      userEmail: email.current.value,
-      userMessage: message.current.value
+      name: name,
+      email: email,
+      message: message,
+      language: language,
+      term: term
     }
 
     console.log(data);
-
-    name.current.value = ''
-    email.current.value = ''
-    message.current.value = ''
   }
 
-  const changeToRed = () => {
-    name.current.style.border = "1px solid red"
-    email.current.style.border = "1px solid red"
-    message.current.style.border = "1px solid red"
-
-    name.current.focus();
-  }
-
-  const changeToBlue = () => {
-    name.current.style.border = "1px solid blue"
-    email.current.style.border = "1px solid blue"
-    message.current.style.border = "1px solid blue"
-  }
-
+  
   return (
     <div className='container'>
       <form>
         <div className="form-group">
-          <input type="text" ref={name} className='user-name' placeholder='Enter your name...' />
+          <input type="text" className='user-name' placeholder='Enter your name...' value={name} onChange={ (e) => setName(e.target.value)} />
         </div>
         <div className="form-group">
-          <input type="text" ref={email} className='user-name' placeholder='Enter your email...' />
+          <input type="text" className='user-email' placeholder='Enter your email...' value={email} onChange={ (e) => setEmail(e.target.value)} />
         </div>
         <div className="form-group">
-          <textarea ref={message} className='user-message' cols="30" rows="10" placeholder='Enter your message...'></textarea>
+          <textarea className='user-message' cols="30" rows="10" placeholder='Enter your message...' value={message} onChange={ (e) => setMessage(e.target.value)}></textarea>
         </div>
         <div className="form-group">
-          <button type='button' className='contact-btn' onClick={() => userDataReceiver() }>Create</button>
+          <select className="user-option" value={language} onChange={ (e) => setLanguage(e.target.value)}>
+            {
+              programmingLanguages.map( (item, index) => <option key={index} value={item}>{item}</option>)
+            }
+          </select>
         </div>
         <div className="form-group">
-          <button className="contact-btn btn-danger" type='button' onClick={ () => changeToRed() }>Change RED</button>
-          <button className="contact-btn btn-primary" type='button' onClick={ () => changeToBlue() }>Change BLUE</button>
+          <input type='checkbox' className='user-checkbox' onChange={(e) => setTerm(!term)} value={term} /> I accept all terms
+        </div>
+        <div className="form-group">
+          <button type='button' className='contact-btn' onClick={() => submitEvent()}>Create</button>
         </div>
       </form>
     </div>
