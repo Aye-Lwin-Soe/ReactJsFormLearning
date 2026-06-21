@@ -1,0 +1,14 @@
+Context (data store) >> Data Transfer (data parsing လုပ်တဲ့ အခါမှာ child လေးဆင့်မဖြတ်တော့ဘဲ context ထဲသိမ်းပီး လိုအပ်တဲ့သူက contextထဲကနေလှမ်းယူသုံး)
+
+App.jsx => Root
+
+App.jsx => component all collect >> indext.js sent >> (public >> index.html ထဲကိုထည့်)
+
+Eg. App.jsx => Root
+    Output, Input, Button => Child (props >> data sent)
+    ErrorMessage => Output, Input, Button (Child)
+
+
+multiple child >> props only sentထပ်ဆင့်ထပ်ဆင့်ပို့ရတာ အဆင်မပြေလို့ (context (process time one time ) use)
+
+language change (context use) တဲ့အခါ componentအားလုံးကို ထပ်ဆင့်ချိန်းဖို့ အဆင်မပြေလို့ 
