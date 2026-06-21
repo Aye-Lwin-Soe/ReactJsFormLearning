@@ -12,3 +12,16 @@ Eg. App.jsx => Root
 multiple child >> props only sentထပ်ဆင့်ထပ်ဆင့်ပို့ရတာ အဆင်မပြေလို့ (context (process time one time ) use)
 
 language change (context use) တဲ့အခါ componentအားလုံးကို ထပ်ဆင့်ချိန်းဖို့ အဆင်မပြေလို့ 
+
+
+===========================================================================================================================
+
+useEffect Hook
+
+main use >> render လုပ်တဲ့ loading time အတွက် သုံး
+
+ဖန်ခွက်နဲ့ အအေး တပြိုင်နက်ထဲ ခေါ်တဲ့အခါ ဖန်ခွက်က မရောက်သေးပဲ အအေးထည့်လိုက်မိသလိုဖြစ်နိုင်တယ် အဲ့ဒါမျိုးကို ထိန်းဖို့ သုံး
+
+Home component / api (Home component not reach >> api call ) issue useEffect use
+
+loading ဆွဲပီးမှာ ဒီ Home Page ကို ခေါ်ဆိုတာမျိုးသတ်မှတ်ချင်ရင် သုံး
