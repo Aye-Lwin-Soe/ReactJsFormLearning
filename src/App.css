@@ -1,38 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-}
-
-.user-name, .user-email, .user-message, .user-option {
-  width: 250px;
-  margin: 5px 0px;
-  padding: 10px;
-}
-
-.contact-btn {
+  height: 100vh;
   background-color: black;
   color: white;
-  border: none;
-  width: 50px;
-  height: 25px;
-  border-radius: 5px;
-  margin: 5px 10px;
-}
-
-.btn-danger {
-  width: 100px;
-  background-color: red;
-  color: white;
-}
-
-.btn-primary {
-  width: 100px;
-  background-color: blue;
-
-}
-
-.user-checkbox {
-  margin: 10px 0px;
+  font-size: 40px;
 }

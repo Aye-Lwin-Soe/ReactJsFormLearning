@@ -1,44 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import "./App.css"
 
-function App() {
-  const [posts, setPosts] = useState([]);
-  const [message, setMessage] = useState('This is Testing Message')
-  const [description, setDescription] = useState('Old Desc....')
-  const fetchData = async() => {
-    const data = await fetch("https://fakestoreapi.com/products")
-                  .then(response => response.json())
-                  .catch(error => console.log(error.message))
-
-    if (data) setPosts(data);
-    
-  }
- 
+const App = () => {
+  const [counter, setCounter] = useState(10)
   useEffect(() => {
-    console.log("use effect hook running.....")
-     fetchData();
-  }, [message, description])
- 
+    if (counter > 0) {
+      
+      const interval = setInterval(() => {
+        setCounter(counter - 1)
+      }, 1000)//1 second
+
+      return () => {
+        clearInterval(interval)
+      }
+
+    }
+
+    
+  }, [counter])
   return (
-    <div>
-        <p>{message}</p>
-        <button onClick={()=>setMessage("Update Text")}>Set Message Button</button>
-        <hr />
-        <p>{description}</p>
-        <button onClick={() => setDescription("Update Description")}>Set New Des Button</button>
-        <h1>Api Posts Data</h1>
-        <hr />
-        <ul>
-        {
-          posts.map((post) => (
-            <li key={post.id}>
-              <div>
-                {post.title} <small>{post.body}</small>
-              </div>
-            </li>
-          ))
-        }
-        </ul>
+    <div className='container'>
+      <h1>{counter}</h1>
     </div>
   )
 }
