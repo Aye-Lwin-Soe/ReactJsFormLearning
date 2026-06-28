@@ -42,3 +42,17 @@ https://fakestoreapi.com/products/1
 https://jsonplaceholder.typicode.com/posts
 
 https://jsonplaceholder.typicode.com/photos
+
+====================================================================
+
+api call infinite >>မ‌ေခါ်ချင်တဲ့အခါ useEffect hook ကိုသုံး (terminate လုပ်ချင်တဲ့အခါ။ ရပ်တန့်ချင်တဲ့အခါ)
+
+eg. useEffect(() => {
+    fetchData();
+  }, [])
+
+တန်ဖိုးချိန်းပီးရင် နောက်တခေါက်ပြန်ချိန်းချင်တဲ့အခါမျိုးမှာလဲ useEffect hook ကိုသုံး
+
+useEffect(() => {
+    console.log("use effect hook running.....")
+  }, [message])
